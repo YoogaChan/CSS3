@@ -1,0 +1,107 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3基础1</title>
+    <style>
+          /*div{*/
+              /*border: 40px solid black;*/
+              /*height: 300px;*/
+              /*width: 300px;*/
+              /*border-image: url(img/1.jpg) 20 round repeat;*/
+          /*}*/
+         /*线性渐变*/
+        /*div{*/
+            /*height: 300px;*/
+            /*width: 600px;*/
+            /*background:-webkit-linear-gradient(left,red, orange, yellow, green, blue, indigo, purple)*/
+        /*}*/
+          /*文本溢出*/
+        /*div{*/
+              /*width: 100px;height: 100px;*/
+              /*border: 1px solid black;*/
+              /*overflow: hidden;*/
+              /*white-space: nowrap;*/
+              /*text-overflow-ellipsis:clip ;*/
+        /*}*/
+          /*文本阴影*/
+        /*div{*/
+            /*!*水平阴影，垂直阴影，模糊的距离，以及阴影的颜色*!*/
+            /*text-shadow: 2px 2px 0px red*/
+        /*}*/
+
+          /*background-origin 指定背景图片的原始起始位置 */
+       /*div {*/
+           /*width:600px;*/
+           /*height:600px;*/
+           /*border:10px dotted lightpink;*/
+           /*padding:10px;*/
+           /**/
+           /*background:white url(img/DVA.png) no-repeat 100px 60px  ;*/
+           /*background-origin: border-box;*/
+           /*background-size: 350px 350px;*/
+           /*!*文本阴影*!*/
+           /*text-shadow: 2px 2px 0px lightpink;*/
+           /*color: white;*/
+           /*font-size: 50px;*/
+       /*}*/
+        /*径向渐变*/
+        /*div{*/
+            /*width:600px;*/
+            /*height:300px;*/
+            /*background:-moz-radial-gradient(bottom left,ellipse,#ace, #f96);*/
+            /*background:-webkit-radial-gradient(bottom left,ellipse,#ace, #f96);*/
+            /*background:-o-radial-gradient(bottom left,ellipse,#ace, #f96);*/
+            /*background:-ms-radial-gradient(bottom left,ellipse,#ace, #f96);*/
+            /*background-image:radial-gradient(bottom left,circle closest-side, red 20%, yellow 30%, green 30%);*/
+          /*}*/
+
+        /*线性渐变*/
+          /*div{*/
+              /*width:600px;*/
+              /*height:300px;*/
+              /*background: -webkit-linear-gradient(right, red , blue); !* Safari 5.1 - 6.0 *!*/
+              /*background: -o-linear-gradient(right, red, blue); !* Opera 11.1 - 12.0 *!*/
+              /*background: -moz-linear-gradient(right, red, blue); !* Firefox 3.6 - 15 *!*/
+              /*background: -ms-linear-gradient(right, red, blue); !* IE 9+ *!*/
+              /*!*background:linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet);*!*/
+              /*!*background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); !* 标准的语法*!*/
+             /*}*/
+          /*颜色rgba()   rgba（R,G,B,A）颜色  A 表示透明度 取值为0-1  */
+            /*div{*/
+                /*width: 300px;*/
+                /*height: 100px;*/
+                /*background: rgba(225,0,0,0.5);*/
+            /*}*/
+          /*border-image  以图片作为元素的边框*/
+          /*div{*/
+              /*width:500px;*/
+              /*height:600px;*/
+              /*border:solid 20px #999;*/
+              /*border-image: url(img/3.png) 10 15 30 20 round repeat;*/
+          /*}*/
+          /*阴影   默认outset为外部投影，inset为内部投影 */
+          /*参数依次为  X轴偏移量（重要） Y轴偏移量（重要） [阴影模糊半径] [阴影扩展半径] [阴影颜色] [投影方式]
+         div{
+             width:300px;
+             height:300px;
+             background:lightpink;
+             box-shadow:15px 15px 5px 1px lightblue;
+         }
+         /*inset 内部投影 参数依次为  X轴偏移量（重要） Y轴偏移量（重要） [阴影模糊半径] [阴影扩展半径] [阴影颜色] [投影方式]         */
+          /*div{*/
+              /*width:100px;*/
+              /*height:100px;*/
+              /*background:#3C9;*/
+              /*-webkit-box-shadow:5px 5px 5px #60C inset;*/
+              /*-moz-box-shadow:5px 5px 5px #60C inset;*/
+              /*-ms-box-shadow:5px 5px 5px #60C inset;*/
+              /*-o-box-shadow:5px 5px 5px #60C inset;*/
+              /*margin:10px 0px;*/
+          /*}*/
+    </style>
+</head>
+<body>
+      <div>D.VA</div>
+</body>
+</html>
