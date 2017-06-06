@@ -1,0 +1,128 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3基础知识（动画）</title>
+    <style>
+        /*div{*/
+            /*width: 150px;*/
+            /*height: 150px;*/
+            /**/
+        /*}*/
+        /*过渡 transition（参数分别为 需要过渡的属性（width、height） 过渡需要时间 过渡函数 过渡延时间 动画曲线*/
+        /*理解应用众多过渡函数的效果*/
+        /*div:hover{*/
+            /*width: 400px;*/
+            /*height: 500px;*/
+            /*-webkit-transition: width 2s linear 1s, height 3s ease-in 2s;*/
+            /*-moz-transition: width 2s linear 1s, height 3s ease-in 2s;*/
+            /*-o-transition: width 2s linear 1s, height 3s ease-in 2s;*/
+            /*-ms-transition: width 2s linear 1s, height 3s ease-in 2s;*/
+            /*transition: width 2s linear 1s, height 3s ease-in 2s;*/
+        /*}*/
+
+
+        /*transform 变形是对元素进行2D或3D转换，可以对元素进行旋转、缩放、平移或扭曲。*/
+        /*transform-origin 用来改变变形的原点 默认居于元素X轴和Y轴的50%处*/
+
+        /* 变形2D-旋转 (x deg  旋转角度 x正数为顺时针 x负数为逆时针) */
+        /*div:hover{*/
+            /*transform: rotate(30deg);*/
+            /*transition: transform 2s;*/
+
+            /*-webkit-transform-origin: 50% 100%;   !*(50%,100%) 表(x,y) (最左 最上)*!*/
+            /*-moz-transform-origin: 50% 100%;*/
+            /*-o-transform-origin: 50% 100%;*/
+            /*-ms-transform-origin: 50% 100%;*/
+
+            /*-webkit-transform: rotate(30deg);*/
+            /*-moz-transform: rotate(30deg);*/
+            /*-o-transform: rotate(30deg);*/
+            /*-ms-transform: rotate(30deg);*/
+        /*}*/
+
+        /* 变形2D 平移 translate */
+       /*div:hover{*/
+           /*transform: translate(100px,100px);     !* (x,y) 长宽 也可以传百分比*!*/
+           /*transition: transform 2s  ease-in;*/
+       /*}*/
+
+        /* 变形2D 缩放 scale （大于1放大，小于1缩小）*/
+        /*div:hover{*/
+            /*transform: scale(2,3);     !* (x,y) 分别为放大的倍数*!*/
+            /*transition: transform 2s  ease-in;*/
+        /*}*/
+
+        /* 变形2D 扭曲 skew */
+        /*div:hover{*/
+        /*transform: skew(30deg,30deg);     !* (x,y) 分别为x轴，y轴的扭曲角度*!*/
+        /*transition: transform 2s  ease-in;*/
+        /*}*/
+
+        /*3D  perspective 表 眼睛到屏幕的距离 */
+        /*#parent{*/
+            /*perspective: 300px;*/
+        /*}*/
+        /*#child{*/
+            /*height: 100px;*/
+            /*width: 100px;*/
+            /**/
+            /*transform-style: preserve-3d;*/
+            /*position: absolute;*/
+            /*margin-left: 100px;*/
+            /*margin-top: 50px;*/
+        /*}*/
+        /*#child:hover{*/
+            /*transform: rotateX(-45deg);*/
+        /*}*/
+
+        /* 动画 animation 参数（名称 动画持续时间 方式 延迟时间 次数 方向 动画函数）*/
+        /*@keyframes move {*/     /*关键帧动画*/
+            /*0%{*/
+                /*width: 150px;*/
+                /**/
+            /*}*/
+            /*50%{*/
+                /*width: 500px;*/
+                /**/
+            /*}*/
+            /*100%{*/
+                /*width: 150px;*/
+                /**/
+            /*}*/
+        /*}*/
+        /*#anima{*/
+            /*width: 150px;*/
+            /*height: 150px;*/
+            /**/
+        /*}*/
+        /*#anima:hover{*/
+            /*animation: move 2s linear 1s 2 infinite;   !*infinite无限次循环  reverse 反向 *!*/
+        /*}*/
+
+        /*图片加载效果*/
+        #loading{
+              animation: move 2s infinite linear;
+              border: 0px solid black;
+              width: 96px;
+              height:96px;
+              margin: 50px auto;
+              background:url(img/loading.png)no-repeat center;
+        }
+           @keyframes move{
+               0%{  transform: rotate(0deg);}
+             100%{  transform: rotate(360deg);}
+           }
+
+</style>
+</head>
+<body>
+   <div id="loading"></div>
+
+   <!--<div>树荫照水爱晴柔</div>-->
+   <!--<div id="anima">醉清风</div>-->
+  <!--<div id="parent">-->
+    <!--<div id="child"></div>-->
+  <!--</div>-->
+</body>
+</html>
