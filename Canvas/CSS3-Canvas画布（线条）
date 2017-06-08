@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3-Canvas画布（线条）</title>
+    <script>
+     window.onload=function () {
+
+         var canvas=document.getElementById("canvas");//获取canvas对象
+
+         var ctx=canvas.getContext("2d"); //创建二维的绘图上下文对象
+
+         //通过上下文对象调用属性或方法来绘图
+
+         ctx.beginPath();//  “beginPath()” 表开始一条路径或者重置当前的路径
+         ctx.lineCap="round";//圆角线条
+         ctx.moveTo(5,100);//开始点坐标
+         ctx.lineTo(200,300);//结束点坐标
+         ctx.lineWidth=20;//“lineWidth”定义路径的宽度（有继承性，如要定义不同宽度的路径则要单独定义）
+         ctx.strokeStyle="lightblue";//“strokeStyle”填充路径的颜色
+         ctx.stroke();//调用 绘制
+
+         ctx.beginPath();//  “beginPath()” 表开始一条路径或者重置当前的路径
+         ctx.lineCap="round";//圆角线条
+         ctx.moveTo(30,30);//开始点坐标
+         ctx.lineTo(300,300);//结束点坐标
+         ctx.lineWidth=20;//“lineWidth”定义路径的宽度（有继承性，如要定义不同宽度的路径则要单独定义）
+         ctx.strokeStyle="lightpink";//“strokeStyle”填充路径的颜色
+         ctx.stroke();//调用 绘制
+
+         ctx.beginPath();//  “beginPath()” 表开始一条路径或者重置当前的路径
+         ctx.lineCap="square";// 正方形线条
+         ctx.moveTo(10,50);//开始点坐标
+         ctx.lineTo(350,400);//结束点坐标
+         ctx.strokeStyle="lightgreen";//填充路径的颜色
+         ctx.stroke();//调用 绘制
+
+     }
+    </script>
+</head>
+<body>
+<h2>Canvas画布（线条）</h2>
+<canvas id="canvas" width="500" height="500" style="border:1px solid red ">
+           浏览器不支持canvas
+</canvas>
+</body>
+</html>
