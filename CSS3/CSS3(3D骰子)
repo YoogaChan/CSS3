@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3(3D骰子)</title>
+    <style>
+        *{padding: 0px;margin: 0px;}
+        #container{
+            width: 500px;
+            height: 500px;
+            border:1px solid red;
+
+            perspective:800px;
+            margin: 0 auto;
+
+        }
+        #wrap{
+            width: 100px;
+            height: 100px;
+            position: relative;
+
+            top:50%;
+            left: 50%;
+            margin-top:-50px;
+            margin-left:-50px;
+
+            transform-style:preserve-3d;
+
+        }
+        li{
+            list-style:none;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            font-size: 36px;
+
+
+        }
+        li:nth-of-type(1){
+            background: green;
+            top:-100px;
+            left: 0px;
+            transform: rotateX(-90deg);
+            transform-origin: bottom;
+
+        }
+        li:nth-of-type(2){
+            background:blue;
+            top:0px;
+            left: -100px;
+            transform: rotateY(90deg);
+            transform-origin: right;
+
+        }
+        li:nth-of-type(3){
+            background:gray;
+            top:0px;
+            left: 0px;
+            transform: translateZ(0px);
+
+        }
+        li:nth-of-type(4){
+            background:orange;
+            top:0px;
+            left: 100px;
+            transform: rotateY(-90deg);
+            transform-origin: left;
+
+        }
+        li:nth-of-type(5){
+            background:black;
+            top:100px;
+            left: 0px;
+            transform: rotateX(90deg);
+            transform-origin: top;
+
+
+        }
+        li:nth-of-type(6){
+            background:#3194EF;
+            top:0px;
+            left: 0px;
+
+            transform: translateZ(100px);
+
+        }
+
+        #container:hover #wrap{
+
+            transform: rotateX(600deg) rotateY(600deg);
+            -webkit-transform: rotateX(600deg) rotateY(600deg);
+            transition: transform 5s;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="container"><!-- 舞台 -->
+
+    <div id="wrap"><!-- 容器 -->
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+
+    </div>
+</div>
+
+</body>
+</html>
