@@ -1,0 +1,34 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3-Canvas画布（图形-矩形）</title>
+    <script>
+        window.onload=function () {
+
+            var canvas=document.getElementById("canvas");//获取canvas对象
+
+            var ctx=canvas.getContext("2d"); //创建二维的绘图上下文对象
+
+            ctx.rect(50,50,200,200);//定义矩形的边框
+            ctx.strokeStyle="red"; //填充边框（路径）颜色
+            ctx.fillStyle="green";//填充边框颜色
+            ctx.fill();
+            ctx.stroke();
+            ctx.clearRect(60,60,100,50);//擦除矩形区域内的图形
+//            ctx.strokeRect(50,50,200,100);//定义无填充的矩形
+//
+//            ctx.fillStyle="red"; //填充矩形颜色
+//            ctx.fliiRect(50,50,200,100);//定义有填充的矩形
+
+        }
+
+    </script>
+</head>
+<body>
+<h2>Canvas画布（图形）</h2>
+<canvas id="canvas" width="500" height="500" style="border:1px solid red ">
+    浏览器不支持canvas
+</canvas>
+</body>
+</html>
