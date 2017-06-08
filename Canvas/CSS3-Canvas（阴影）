@@ -1,0 +1,30 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3-Canvas（阴影）</title>
+    <script>
+        window.onload=function () {
+
+            var canvas=document.getElementById("canvas");//获取canvas对象
+
+            var ctx=canvas.getContext("2d"); //创建二维的绘图上下文对象
+
+              ctx.shadowOffsetX=10;//设计阴影与形状的水平距离
+              ctx.shadowOffsetY=10;//设计阴影与形状的垂直距离
+              ctx.shadowColor="lightblue";//定义阴影的颜色
+              ctx.fillStyle="lightpink";
+              ctx.shadowBlur=10;//定义阴影的模糊级别
+              ctx.fillRect(50,50,200,100);//定义填充颜色的矩形
+
+        }
+
+    </script>
+</head>
+<body>
+<h2>Canvas（阴影）</h2>
+<canvas id="canvas" width="500" height="500" style="border:1px solid red ">
+    浏览器不支持canvas
+</canvas>
+</body>
+</html>
